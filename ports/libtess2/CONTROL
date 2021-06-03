@@ -1,0 +1,5 @@
+Source: libtess2
+Version: 1.0.0
+Port-Version: 1
+Description: Polygon tesselator and triangulator.
+Homepage: https://github.com/sundarhigher/libtess2

@@ -1,16 +1,22 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a443b66..0e738f9 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -13,9 +13,6 @@ if(!WIN32)
+ 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wextra")
+ else()
+ 	set(XINPUT "Xinput9_1_0")
+-	if ( ${CMAKE_SYSTEM_VERSION} LESS 6.1 )
+-		set(XINPUT, "xinput")
+-	endif()
+ endif()
+ 
+ if(ANDROID)
 diff --git a/lib/CMakeLists.txt b/lib/CMakeLists.txt
-index 14d5e85..cb7232f 100644
+index 5d53d1d..cb7232f 100644
 --- a/lib/CMakeLists.txt
 +++ b/lib/CMakeLists.txt
-@@ -30,19 +30,27 @@ if (GAINPUT_BUILD_SHARED)
- endif (GAINPUT_BUILD_SHARED)
- 
- if (GAINPUT_BUILD_STATIC)
--  message(STATUS "..Building shared libraries (-DGAINPUT_BUILD_STATIC=OFF to disable)")
-+  message(STATUS "..Building static libraries (-DGAINPUT_BUILD_STATIC=OFF to disable)")
-   add_library(gainputstatic STATIC ${sources} ${mmsources})
-   set_target_properties(gainputstatic PROPERTIES DEBUG_POSTFIX -d FOLDER gainput)
-   set(install_libs ${install_libs} gainputstatic)
+@@ -37,12 +37,20 @@ if (GAINPUT_BUILD_STATIC)
  endif (GAINPUT_BUILD_STATIC)
  
  if(WIN32)
