@@ -1,11 +1,9 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO jkuhlmann/gainput
-    REF v1.0.0
-    SHA512 56fdc4c0613d7260861885b270ebe9e624e940175f41e3ac82516e2eb0d6d229e405fbcc2e54608e7d6751c1d8658b5b5e186153193badc6487274cb284a8cd6
+    REPO sundarhigher/gainput
+    REF v1.0.1
+    SHA512 353a8ddf5ca8a17d94fd9fc401cb6330bf702e4fc52552b2bd0e59462ec22b53fbb1ce85145010c60688ad7de63d71ef0a8a3d94e6cd8f8b33e46b66bf83ddd8
     HEAD_REF master
-    PATCHES 
-        "install_as_cmake_package.patch"
 )
 
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "static")
